@@ -10,11 +10,25 @@
 </head>
 
 <body>
-	<div id="vn"></div>
-	<script type="text/javascript" src="/assets/visual-novel.min.js">
-	</script>
-	<script type="text/javascript" src="main.js">
-	</script>
+	<div id="vn" onmousemove="showCoord(event)" onmouseout="clearCoord()"></div> <!-- Remove events when done -->
+  <p id="pos"></p>
+	<script type="text/javascript" src="/assets/visual-novel.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+  <script>
+    // Temp script
+    // Use for gathering coords for vn
+    // Delete when finished
+    function showCoord(event) {
+      let x = event.clientX;
+      let y = event.clientY;
+      let coor = `X: ${x}; Y: ${y}`;
+      document.getElementById('pos').innerHTML = coor;
+    }
+
+    function clearCoord() {
+      document.getElementById('pos').innerHTML = "";
+    }
+  </script>
 </body>
 
 </html>
