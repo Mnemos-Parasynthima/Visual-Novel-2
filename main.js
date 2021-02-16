@@ -5,10 +5,10 @@
 * Image locations
 */
 const vn = new VisualNovel(
-    "vn", 
-    800, 
-    600, 
-    "imgs/" 
+  "vn",
+  800,
+  600,
+  "imgs/"
 );
 
 // Initiates vn
@@ -19,27 +19,16 @@ vn.setNovelTitle("Visual Novel", "Volume 1");
 vn.setStartScreenBgColor("lightblue");
 vn.setStartScreenMenuPos(500, 500);
 
-// Sets vn config (bg color, dialog colo [bg and text])
-vn.setBgColor("lightblue");
+// Sets vn config (bg color, dialog color [bg and text])
+vn.setBgColor("pink");
 vn.setDialogBgColor("lightgrey");
 vn.setDialogTextColor("black");
-
-vn.fadeBg('out', 1000);
-// // text, fade in, duration
-// vn.fadeSceneText( "Mnemos-Parasynthima Presents", "in", 500 );
-// // text, fade out, duration
-// vn.fadeSceneText( "Mnemos-Parasynthima Presents", "out", 500 );
-// // text, fade in, duration
-// vn.fadeSceneText( "Visual Novel: Volume 1", "in", 500 );
-// // text, fade out, duration
-// vn.fadeSceneText( "Visual Novel: Volume 1", "out", 500 );
-vn.fadeBg('in', 1000);
 
 vn.input('name', "What's your name?"); // Asks user for char name
 
 // Creates char object
 const user = {
-  name: {name},
+  name: { name },
   nameStyle: "color: darkblue",
   width: 600, // Temp, testing?
   height: 600, // Temp, testing?
@@ -50,3 +39,14 @@ const user = {
   } // Add dialog object (opt)
 }
 
+vn.fadeBg('in', 1000);
+vn.setBgColor('black');
+vn.addTextToScene("intro", "Mnemos-Parasynthima Presents",
+  {
+    x: 300, y: 100, z: 0.4,
+    width: 300, height: 50,
+    size: 50,
+    color: "white",
+    fade: 500
+  }, 500
+);
