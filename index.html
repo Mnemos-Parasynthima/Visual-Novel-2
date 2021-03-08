@@ -6,16 +6,18 @@
 	<title>Visual Novel</title>
 	<meta name="description" content="An HTML5 visual novel">
 	<meta name="author" content="Mnemos-Parasynthima">
-	<link type="text/css" rel="stylesheet" href="/assets/visual-novel.min.css" />
+	<link type="text/css" rel="stylesheet" href="./assets/visual-novel.min.css" />
 </head>
 
 <body>
 	<div id="vn" onmousemove="showCoord(event)" onmouseout="clearCoord()"></div> <!-- Remove events when done -->
-  <p id="pos"></p>
-	<script type="text/javascript" src="/assets/visual-novel.min.js"></script>
-	<script type="text/javascript" src="main.js"></script>
-  <script>
-    // Temp script
+	<p id="pos"></p>
+	<script type="text/javascript" src="./assets/visual-novel.min.js">
+	</script>
+	<script type="text/javascript" src="./main.js">
+	</script>
+	<script>
+		// Temp script
     // Use for gathering coords for vn
     // Delete when finished
     function showCoord(event) {
@@ -28,7 +30,7 @@
     function clearCoord() {
       document.getElementById('pos').innerHTML = "";
     }
-  </script>
+	</script>
 </body>
 
 </html>

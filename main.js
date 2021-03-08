@@ -1,8 +1,8 @@
-/* New visual novel object
-* HTML element id 
-* Width
-* Height
-* Image locations
+/** New visual novel object
+* @param {string} vn - HTML element id 
+* @param {number} 800 - Width of the visual novel
+* @param {number} 600 - Height of the visual novel
+* @param {string} imgs/ - Image locations
 */
 const vn = new VisualNovel(
   "vn",
@@ -39,8 +39,8 @@ const user = {
   } // Add dialog object (opt)
 }
 
-vn.fadeBg('in', 1000);
 vn.setBgColor('black');
+vn.fadeBg('in', 1000);
 vn.addTextToScene("intro", "Mnemos-Parasynthima Presents",
   {
     x: 300, y: 100, z: 0.4,
@@ -50,3 +50,4 @@ vn.addTextToScene("intro", "Mnemos-Parasynthima Presents",
     fade: 500
   }, 500
 );
+vn.fadeSceneText("intro", "out", 500);
