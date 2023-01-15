@@ -50,4 +50,4 @@ vn.addTextToScene("intro", "Mnemos-Parasynthima Presents",
     fade: 500
   }, 500
 );
-vn.fadeSceneText("intro", "out", 500);
+//vn.fadeSceneText("intro", "out", 500);
